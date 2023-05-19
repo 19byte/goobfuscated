@@ -1,10 +1,10 @@
 # go-obfuscated-id
 
 ## Go Obfuscated ID
-* ID is a value object that use for identify a domain object.<br>
-The domain entity is only aware of itself, and can never reach across its<br>
-own object boundaries to find out if an ID it has generated is actually unique.<br>
-Once a new entity gets persisted as a record in the database it will get an ID.<br>
+* ID is a value object that use for identify a domain object.
+The domain entity is only aware of itself, and can never reach across its
+own object boundaries to find out if an ID it has generated is actually unique.
+Once a new entity gets persisted as a record in the database it will get an ID.
 That is, the entity has no identity until it has been persisted.<br>
 
 ## USAGE
