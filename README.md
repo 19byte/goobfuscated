@@ -17,7 +17,7 @@ That is, the entity has no identity until it has been persisted.<br>
 
 * Server Obfuscated & Response
 ```
-    used obfuscated.ID receive
+    // used obfuscated.ID receive
     type Result struct{
         ID obfuscated.ID `db:"id"`
         Name string `db:"name"`
@@ -47,8 +47,8 @@ That is, the entity has no identity until it has been persisted.<br>
         Name string `db:"name"`
     }
     // Parse
-    ID > 100
-    Name > golang
+    // ID > 100
+    // Name > golang
 ```
 
 ## USAGE
