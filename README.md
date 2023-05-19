@@ -14,7 +14,7 @@ That is, the entity has no identity until it has been persisted.<br>
 request model
 ```go
 import (
-    obfuscated "github.com/19byte/go-obfuscated-id"
+    obfuscated "github.com/19byte/goobfuscated"
 )
 
 // RequestModel http request parameters
