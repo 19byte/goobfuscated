@@ -1,4 +1,4 @@
-package obfuscated
+package goobfuscated
 
 import (
 	crand "crypto/rand"
