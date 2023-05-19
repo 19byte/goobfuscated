@@ -7,8 +7,51 @@ own object boundaries to find out if an ID it has generated is actually unique.
 Once a new entity gets persisted as a record in the database it will get an ID.
 That is, the entity has no identity until it has been persisted.<br>
 
-## USAGE
+## PROCESS
 
+* DB Query Result
+```
+    ID      Name
+    100     golang
+```
+
+* Server Obfuscated & Response
+```
+    used obfuscated.ID receive
+    type Result struct{
+        ID obfuscated.ID `db:"id"`
+        Name string `db:"name"`
+    }
+```
+
+* Client Received
+```
+    {
+        "id":"Q7HnWooQAgA",
+        "name":"golang"
+    }
+```
+
+* Client Send
+```
+    {
+        "id":"Q7HnWooQAgA",
+        "name":"golang"
+    }
+```
+
+* Server Received
+```
+    type Request struct{
+        ID obfuscated.ID `db:"id"`
+        Name string `db:"name"`
+    }
+    // Parse
+    ID > 100
+    Name > golang
+```
+
+## USAGE
 
 
 request model
