@@ -76,11 +76,12 @@ var primes = []uint64{
 }
 
 func init() {
-	rand.Seed(time.Now().UnixNano())
+	// Create a new random number generator with a unique seed.
+	rng := rand.New(rand.NewSource(time.Now().UnixNano()))
 
 	// Random a PRIME number from local primes. It must be smaller
 	// than 2147483647 (MAX ID).
-	defaultIDPrime = primes[rand.Intn(len(primes))]
+	defaultIDPrime = primes[rng.Intn(len(primes))]
 
 	// defaultIDPrime must be a valid prime.
 	if !big.NewInt(int64(defaultIDPrime)).ProbablyPrime(MillerRabin) {
@@ -94,6 +95,7 @@ func init() {
 	// Generate a Pure Random Integer less than 2147483647 (MAX ID).
 	defaultIDRandom = randN(int64(MaxInt) - 1)
 }
+
 
 // MarshalJSON satisfies json.Marshaller and transparently obfuscates the value
 // using Default prime
