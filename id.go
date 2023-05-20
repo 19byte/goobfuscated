@@ -76,7 +76,7 @@ var primes = []uint64{
 }
 
 func init() {
-	rand.NewSource(time.Now().UnixNano())
+	rand.Seed(time.Now().UnixNano())
 
 	// Random a PRIME number from local primes. It must be smaller
 	// than 2147483647 (MAX ID).
