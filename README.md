@@ -1,6 +1,5 @@
-# go-obfuscated-id
+# Go Obfuscated ID
 
-## Go Obfuscated ID
 * ID is a value object that use for identify a domain object.
 The domain entity is only aware of itself, and can never reach across its
 own object boundaries to find out if an ID it has generated is actually unique.
